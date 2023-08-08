@@ -11,6 +11,10 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
+      transform: true, //Transforma la información que pasa através de los DTO
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
     }),
   );
 
